@@ -1,0 +1,43 @@
+body{
+	background:black;
+}
+
+h1{
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+section {
+	margin: 5px;
+	height: 100px;
+	width: 100px;
+	border-radius: 10px;
+	background-color: #ec1000;
+}
+
+button{
+	margin-top: 25px;
+	display: flex;
+	justify-content: center;
+	height: 30px;
+	width: 100px;
+	background-color: #3e545f;
+	color: white;
+	border-radius: 15px;
+	border: none;
+}
+
+.selected{
+	background: #27f527c4;
+}
+
+.highlighted{
+	border: 1px solid white;
+}
