@@ -1,86 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sequencer</title>
+	<title>The Sequencer</title>
+	
 	<link rel="stylesheet" type="text/css" href="sequencer.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.core.min.js"></script>
 </head>
 <body>
-	<h1>The Sequencer</h1>
-	<div class="track" id="track1">
-		<section class="box selected highlighted" id="one"></section>
-		<section class="box selected highlighted" id="two"></section>
-		<section class="box selected highlighted" id="three"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-	</div>	
-	<div class="track" id="track2">
-		<section class="box selected highlighted" id="one"></section>
-		<section class="box selected highlighted" id="two"></section>
-		<section class="box selected highlighted" id="three"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
+	<h1>Sequencer</h1>
+	<div class="tracks-list" id="tracks-list">
+		<div class="track" id="track1">
+			<select id="trackOneSound" onchange="soundChange(this, 0)">
+				<option>Wipe</option>
+				<option>Glimmer</option>
+				<option>Veil</option>
+				<option>Prism1</option>
+			</select>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+			<section class="box selected highlighted"></section>
+		</div>
+	</div>
+<!-- 	<div class="track" id="track2">
+		<select onchange="soundChange(this, 1)">
+			<option>Wipe</option>
+			<option>Glimmer</option>
+			<option>Veil</option>
+			<option>Prism1</option>
+		</select>
+
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
 	</div>	
 	<div class="track" id="track3">
-		<section class="box selected highlighted" id="one"></section>
-		<section class="box selected highlighted" id="two"></section>
-		<section class="box selected highlighted" id="three"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
+		<select onchange="soundChange(this, 2)">
+			<option>Wipe</option>
+			<option>Glimmer</option>
+			<option>Veil</option>
+			<option>Prism1</option>
+		</select>
+
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
 	</div>	
 	<div class="track" id="track4">
-		<section class="box selected highlighted" id="one"></section>
-		<section class="box selected highlighted" id="two"></section>
-		<section class="box selected highlighted" id="three"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
-		<section class="box selected highlighted" id="four"></section>
+		<select onchange="soundChange(this, 3)">
+			<option>Wipe</option>
+			<option>Glimmer</option>
+			<option>Veil</option>
+			<option>Prism1</option>
+		</select>
+
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+		<section class="box selected highlighted"></section>
+	</div> -->
+	<h2>Tempo</h2>
+	<div class="controls" id="sliderForm">
+		<form oninput="result.value=math(a.value)">
+			<input type="range" min="87" max="250" value="166" class="slider" id="myRange" name="a">
+			<output name="result">90</output>
+		</form>
 	</div>
-	<div>
+	<div class="controls">
 		<button onclick = "start()">Start/Stop</button>
+	</div>
+	<div class="controls">
+		<button onclick = "addTrack()">Add track</button>
 	</div>
 	<script type="text/javascript" src="sequencer.js"></script>
 </body>
